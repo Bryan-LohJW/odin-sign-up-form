@@ -51,23 +51,114 @@ table {
 body {
     display: flex;
     width: 100vw;
+    height: 100vh;
 }
 
 .sidebar {
-    flex: 0.3 1 0;
+    flex: 1 1 0;
+
+    background-image: url('/images/side-bar.avif');
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+
+.sidebar p {
+    background-color: rgba(0, 0, 0, 0.4);
+
+    position:relative;
+    top: 20%;
+
+    color: rgba(255, 255, 255, 1);
+    font-size: max(5vw, 3rem);
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar p::before{
+    background-image: url('images/logo.jpeg');
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 3rem; 
+    height: 3rem;
+    content:"";
 }
 
 .mainContent {
-    flex: 0.7 1 0;
+    flex: 2 1 0;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
 }
 
-.logo {
-    background-color: black;
-    opacity: 50%;
+.mainContent>p {
+    font-size: max(2vw, 1.5rem);
+    padding: 20px 3rem;
+    margin-right: 20%;
+    font-weight: bold;
 }
 
-.backgroundImg {
-    z-index: -1;
+em {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+form {
+    padding: 30px 0px;
+}
+
+form fieldset{
+    background-color: whitesmoke;
+
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+    
+    padding: 40px 0px 20px;
+}
+
+.formRow {
+    display: flex;
+    justify-content: start;
+    gap: 4rem;
+    
+    margin: 20px 3rem;
+}
+
+label{
+    display: block;
+
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+form>fieldset>legend {
     position: relative;
-    border: 100px solid blue;
+    top: 30px;
+    left: 3rem;
+
+    font-size: 1.2rem;
+
+}
+
+form button {
+    margin: 30px 3rem;
+}
+
+form input {
+    border: 2px solid grey;
+    border-radius: 3px;
+    height: 20px;
+}
+
+form button {
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 15px 100px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+form button:hover {
+    color: black;
 }
