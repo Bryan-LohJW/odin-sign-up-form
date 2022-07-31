@@ -5,14 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <div class="sidebar">
-        <img src="images/side-bar.avif" alt="shih tzu">
-        <div class="logo"></div>
+        <p>Shih Tzu Network</p>
     </div>
     <div class="mainContent">
-
+        <p>This is the exclusive Shih Tzu network for owners of the wonderful breed to connect and share pictures of beloved babies</p>
+        <p>It is not a real website and you should <em>not</em> put real personal information within this form</p>
+        <form action="" method="">
+            <fieldset>
+                <legend>Hello, this is a form</legend>
+                <div class="formRow">
+                    <div class="formInput">
+                        <label for="first-name">*First Name:</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Maxine" required>
+                    </div>
+                    <div class="formInput">
+                        <label for="last-name">*Last Name:</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Tan" required>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="formInput">
+                        <label for="email">*Email:</label>
+                        <input type="email" name="email" id="email" placeholder="maxinetan@email.com" required>
+                    </div>
+                    <div class="formInput">
+                        <label for="number">*Phone Number:</label>
+                        <input type="tel" name="number" id="number" pattern="(\+65 ?)?[8-9]\d{7}" placeholder="91234567" title="Please enter a valid 8 digit phone number (+65)" required>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="formInput">
+                        <label for="password">*Password:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="formInput">
+                        <label for="passwordConfirm">*Confirm Password:</label>
+                        <input type="password" name="passwordConfirm" id="passwordConfirm" onkeyup="check()" required>
+                        <span id="message"></span>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit">Submit</button>
+            <p>Already a member? <a>Log in</a></p>
+        </form>
     </div>
+    <script>
+        const check = function() {
+            if (document.getElementById('password').value ==
+                document.getElementById('passwordConfirm').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'matching';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'not matching';
+            }
+        }    
+    </script>
 </body>
 </html>
