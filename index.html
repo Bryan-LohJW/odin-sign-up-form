@@ -14,7 +14,7 @@
     <div class="mainContent">
         <p>This is the exclusive Shih Tzu network for owners of the wonderful breed to connect and share pictures of beloved babies</p>
         <p>It is not a real website and you should <em>not</em> put real personal information within this form</p>
-        <form action="" method="">
+        <form action="" method="" onsubmit="return validatePw()">
             <fieldset>
                 <legend>Join free today</legend>
                 <div class="formRow">
@@ -46,6 +46,7 @@
                         <label for="passwordConfirm">*Confirm Password:</label>
                         <input type="password" name="passwordConfirm" id="passwordConfirm" onkeyup="check()" required>
                         <span id="message"></span>
+                        <input type="hidden"/>
                     </div>
                 </div>
             </fieldset>
@@ -55,13 +56,18 @@
     </div>
     <script>
         const check = function() {
-            if (document.getElementById('password').value ==
-                document.getElementById('passwordConfirm').value) {
+            if (document.getElementById('password').value == document.getElementById('passwordConfirm').value) {
                 document.getElementById('message').style.color = 'green';
                 document.getElementById('message').innerHTML = 'matching';
             } else {
                 document.getElementById('message').style.color = 'red';
                 document.getElementById('message').innerHTML = 'not matching';
+            }
+        }
+        const validatePw = () => {
+            if (document.getElementById('password').value !== document.getElementById('passwordConfirm').value) {
+                alert("Please enter matching passwords");
+                return false;
             }
         }    
     </script>
