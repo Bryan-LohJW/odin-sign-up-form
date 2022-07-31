@@ -52,10 +52,11 @@ body {
     display: flex;
     width: 100vw;
     height: 100vh;
+    font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
 }
 
 .sidebar {
-    flex: 1 1 0;
+    flex: 4 1 0;
 
     background-image: url('/images/side-bar.avif');
     background-size: cover;
@@ -65,18 +66,21 @@ body {
 }
 
 .sidebar p {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
 
     position:relative;
-    top: 20%;
+    top: 60%;
 
-    color: rgba(255, 255, 255, 1);
-    font-size: max(5vw, 3rem);
+    color: lightgray;
+    font-size: 3rem;
     margin: 0px;
-    padding: 0px;
+    padding: 30px 0px;
 }
 
 .sidebar p::before{
+    position: relative;
+    right: 10px;
+    top:8px;
     background-image: url('images/logo.jpeg');
     background-size: 100% 100%;
     display: inline-block;
@@ -86,7 +90,7 @@ body {
 }
 
 .mainContent {
-    flex: 2 1 0;
+    flex: 6 1 0;
     display: flex;
     flex-direction: column;
     
@@ -97,13 +101,13 @@ body {
     font-size: max(2vw, 1.5rem);
     padding: 20px 3rem;
     margin-right: 20%;
-    font-weight: bold;
+    
 }
 
 em {
     font-style: italic;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 130%;
 }
 
 form {
@@ -144,6 +148,15 @@ form>fieldset>legend {
 
 form button {
     margin: 30px 3rem;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(153, 153, 153, 0.575);
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 15px 100px;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    cursor: pointer;
+    transition: 100ms;
 }
 
 form input {
@@ -152,13 +165,24 @@ form input {
     height: 20px;
 }
 
-form button {
-    border: 2px solid grey;
-    border-radius: 10px;
-    padding: 15px 100px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+form input:focus {
+    background-color: lightgrey;
+    border: 2px solid black;
+    outline: none;
 }
 
 form button:hover {
-    color: black;
+    filter: brightness(50%);
 }
+
+.mainContent>form>p {
+    padding-left: 3rem;
+    font-size: 1rem;
+}
+
+.mainContent>form>p>a {
+    color: chocolate;
+    text-decoration: underline;
+    cursor: pointer;    
+}
+
