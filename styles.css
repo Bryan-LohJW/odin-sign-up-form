@@ -58,7 +58,7 @@ body {
 .sidebar {
     flex: 4 1 0;
 
-    background-image: url('/images/side-bar.avif');
+    background-image: url('images/side-bar.avif');
     background-size: cover;
     background-position: center;
 
@@ -142,7 +142,8 @@ form>fieldset>legend {
     top: 30px;
     left: 3rem;
 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 
 }
 
@@ -150,7 +151,7 @@ form button {
     margin: 30px 3rem;
     font-size: 20px;
     font-weight: bold;
-    background-color: rgba(153, 153, 153, 0.575);
+    background-color: rgb(218, 191, 40);
     border: 2px solid grey;
     border-radius: 10px;
     padding: 15px 100px;
@@ -172,7 +173,7 @@ form input:focus {
 }
 
 form button:hover {
-    filter: brightness(50%);
+    filter: brightness(70%);
 }
 
 .mainContent>form>p {
